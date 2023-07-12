@@ -1,16 +1,14 @@
 function showDateTime(event) {
-  if (event.target.value.length > 0) {
-    if (event.target.value === "red") {
+    if (event.target.value === "tokyo") {
       alert("❤️");
     }
-    if (event.target.value === "blue") {
+    if (event.target.value === "sydney") {
       alert("💙");
     }
-    if (event.target.value === "yellow") {
+    if (event.target.value === "paris") {
       alert("💛");
     }
   }
-}
 
-let colorSelect = document.querySelector("#colors");
-colorSelect.addEventListener("change", showDateTime);
+let countrySelect = document.querySelector("#countries");
+countrySelect.addEventListener("change", showDateTime);
