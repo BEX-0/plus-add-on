@@ -1,8 +1,8 @@
 function showDateTime(event) {
     let timezone = event.target.value;
     let currentData = moment().tz(timezone);
-    let location = document.querySelector(".location")
-    location.innerHTML = `
+    let locationList = document.querySelector(".location-list")
+    locationList.innerHTML = `
     <div class="row">
         <div class="col left">
             <div class="name">${timezone}</div>
@@ -19,7 +19,3 @@ citySelect.addEventListener("change", showDateTime);
 
 showDateTime();
 setInterval(showDateTime, 1000);
-
-// .format(`h:mm:ss [<small>] A[</small>]`);
-
-// .format("dddd MMMM D, YYYY");
