@@ -3,12 +3,14 @@ body {
     color: white;
     text-align: center;
 }
-.city-list {
-    text-align: left;
-    margin: 10px;
-}
 footer {
     margin-top: 20px;
+}
+.left {
+    text-align: left;
+}
+h2 {
+    margin: 0;
 }
 .main-body {
     border: 1px solid white;
@@ -18,11 +20,11 @@ footer {
     display: block;
     margin-top: 100px;
 }
+.right {
+    text-align: right;
+}
 select {
     border-radius: 5px;
     padding: 5px 10px;
-}
-#submit {
-    padding: 5px 10px;
-    border-radius: 5px;
+    width: 75%;
 }
