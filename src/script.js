@@ -1,8 +1,13 @@
-function showDateTime(event) {
-    let timezone = event.target.value;
-    let currentDateTime = moment.tz(timezone).format("dddd, MMMM D, YYYY h:m A");
-        alert(`It is ${currentDateTime} in ${timezone}`);
+function updateParis() {
+    let paris = document.querySelector("#paris");
+    let parisDate = paris.querySelector(".date");
+    parisDate.innerHTML = moment.tz("France/Paris")
+    .format("dddd MMMM D, YYYY");
+
+    let parisTime = paris.querySelector(".time");
+    parisTime.innerHTML = moment.tz("France/Paris")
+    .format(`h:mm:ss [<small>] A[</small>]`);
 }
 
-let citySelect = document.querySelector("#cities");
-citySelect.addEventListener("change", showDateTime);
+updateParis();
+setInterval(updateParis, 1000);
