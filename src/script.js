@@ -4,5 +4,5 @@ function showDateTime(event) {
         alert(`It is ${currentDateTime} in ${timezone}`);
 }
 
-let countrySelect = document.querySelector("#countries");
-countrySelect.addEventListener("change", showDateTime);
+let citySelect = document.querySelector("#cities");
+citySelect.addEventListener("change", showDateTime);
