@@ -3,28 +3,46 @@ body {
     color: white;
     text-align: center;
 }
+.city {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+}
 footer {
     margin-top: 20px;
 }
 .left {
     text-align: left;
 }
-h2 {
-    margin: 0;
+h1 {
+    font-size: 40px;
+    padding-top: 20px;
 }
 .main-body {
     border: 1px solid white;
     border-radius: 20px;
-    max-width: 500px;
+    max-width: 650px;
     margin: 0 auto;
     display: block;
     margin-top: 100px;
 }
 .right {
     text-align: right;
+    font-size: 35px;
+}
+.row {
+    padding: 10px;
+}
+.row:last-child {
+    padding-bottom: 30px;
 }
 select {
     border-radius: 5px;
     padding: 5px 10px;
     width: 75%;
+    margin-bottom: 20px;
+}
+.time small {
+    font-size: 18px;
+    vertical-align: middle;
 }
