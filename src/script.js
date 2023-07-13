@@ -20,14 +20,15 @@ function updatePlaceholders() {
 updatePlaceholders();
 setInterval(updatePlaceholders, 1000);
 
-function showDateTime(event) {
+function changeCity(event) {
     let timezone = event.target.value;
     let currentData = moment().tz(timezone);
+    let city = timezone.replace("_"," ").split("/")[1];
     let locationList = document.querySelector(".location-list")
     locationList.innerHTML = `
     <div class="row">
         <div class="col left">
-            <div class="name">${timezone}</div>
+            <div class="name">${city}</div>
             <div class="date">${currentData.format("dddd MMMM D, YYYY")}</div>
         </div>
         <div class="col right">
@@ -37,4 +38,4 @@ function showDateTime(event) {
 }
 
 let citySelect = document.querySelector("#cities");
-citySelect.addEventListener("change", showDateTime);
+citySelect.addEventListener("change", changeCity);
