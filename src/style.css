@@ -3,6 +3,10 @@ body {
     color: white;
     text-align: center;
 }
+.city-list {
+    text-align: left;
+    margin: 10px;
+}
 footer {
     margin-top: 20px;
 }
