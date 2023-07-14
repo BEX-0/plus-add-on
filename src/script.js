@@ -18,7 +18,7 @@ function updatePlaceholders() {
 }
 
 updatePlaceholders();
-setInterval(updatePlaceholders, 1000);
+var update = setInterval(updatePlaceholders, 1000);
 
 function changeCity(event) {
     let timezone = event.target.value;
@@ -38,7 +38,13 @@ function changeCity(event) {
             <div class="time">${currentData.format(`h:mm:ss [<small>] A[</small>]`)}</div>
         </div>
     </div>`
+
+    if (timezone != "Europe/Amsterdam" || "America/New_York") {
+        clearInterval(update);
+    }
 }
 let citySelect = document.querySelector("#cities");
 citySelect.addEventListener("change", changeCity);
+
+
 
