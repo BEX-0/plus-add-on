@@ -10,6 +10,9 @@ a {
     font-weight: 600;
     color: red;
 }
+a:hover {
+    text-decoration: underline;
+}
 .date {
     font-size: 18px;
     font-weight: 500;
@@ -39,7 +42,8 @@ h1 {
     margin: 0 auto;
     display: block;
     margin-top: 100px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
 }
 .name {
     font-size: 25px;
@@ -53,12 +57,11 @@ h1 {
 .row {
     padding: 10px;
 }
-.row:last-child {
-    padding-bottom: 40px;
-}
 select {
     border-radius: 5px;
-    border: 1px solid black;
+    border: 1px solid gray;
+    background-color: #555565;
+    color: white;
     padding: 5px 10px;
     width: 75%;
     margin-bottom: 20px;
