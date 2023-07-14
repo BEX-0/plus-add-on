@@ -1,6 +1,6 @@
 function updatePlaceholders() {
     let newYork = document.querySelector("#new-york");
-    let newYorkData = moment.tz("America/New_York");
+    let newYorkData = moment().tz("America/New_York");
     let newYorkDate = newYork.querySelector(".date");
     newYorkDate.innerHTML = newYorkData.format("dddd MMMM D, YYYY");
 
@@ -22,7 +22,10 @@ setInterval(updatePlaceholders, 1000);
 
 function changeCity(event) {
     let timezone = event.target.value;
-    let currentData = moment().tz(timezone);
+    if (timezone === "current-location") {
+        timezone = moment.tz.guess();
+    }
+    let currentData = moment.tz(timezone);
     let city = timezone.replace("_"," ").split("/")[1];
     let locationList = document.querySelector(".location-list")
     locationList.innerHTML = `
@@ -34,8 +37,8 @@ function changeCity(event) {
         <div class="col right">
             <div class="time">${currentData.format(`h:mm:ss [<small>] A[</small>]`)}</div>
         </div>
-    </div>    `
+    </div>`
 }
-
 let citySelect = document.querySelector("#cities");
 citySelect.addEventListener("change", changeCity);
+
