@@ -15,6 +15,14 @@ function updatePlaceholders() {
 
     let amsterdamTime = amsterdam.querySelector(".time");
     amsterdamTime.innerHTML =amsterdamData.format(`h:mm:ss [<small>] A[</small>]`);
+
+    let edmonton = document.querySelector("#edmonton");
+    let edmontonData = moment.tz("America/Edmonton");
+    let edmontonDate = edmonton.querySelector(".date");
+    edmontonDate.innerHTML = edmontonData.format("dddd MMMM D, YYYY");
+
+    let edmontonTime = edmonton.querySelector(".time");
+    edmontonTime.innerHTML = edmontonData.format(`h:mm:ss [<small>] A[</small>]`);    
 }
 
 updatePlaceholders();
@@ -39,7 +47,7 @@ function changeCity(event) {
         </div>
     </div>`
 
-    if (timezone != "Europe/Amsterdam" || "America/New_York") {
+    if (timezone != "Europe/Amsterdam" || "America/New_York" || "America/Edmonton") {
         clearInterval(update);
     }
 }
