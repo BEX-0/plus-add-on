@@ -45,7 +45,9 @@ function changeCity(event) {
         <div class="col right">
             <div class="time">${currentData.format(`h:mm:ss [<small>] A[</small>]`)}</div>
         </div>
-    </div>`
+    </div>
+    <a href="index.html" id="home-link"> Go Back to Home Page</a>
+    `
 
     if (timezone != "Europe/Amsterdam" || "America/New_York" || "America/Edmonton") {
         clearInterval(update);
